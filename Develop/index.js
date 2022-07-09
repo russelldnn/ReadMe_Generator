@@ -48,7 +48,7 @@ const questions = [
 
     {
         type: 'list',
-        name: 'lisense',
+        name: 'license',
         message: 'what license(s) are applied to this app?',
         choices: ["AAL", "ISC", "MIT", "NTP", "W3C"]
     },
@@ -68,10 +68,18 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(data) {
+    fs.writeFile('README.md', data)
+    console.log ("readme has been written")
+};
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    inquirer.prompt(questions).then(function (appInput) {
+        const data = generateMarkdown(appInput) ;
+        writeToFile;
+    })
+}
 
 // Function call to initialize app
 init();
