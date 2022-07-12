@@ -10,11 +10,6 @@ const questions = [
         message: 'What is the name of your application?'
     },
 
-    {
-        type: 'input',
-        name: 'repoName',
-        message: 'What is the name of your applications github repo?'
-    },
 
     {
         type: 'input',
@@ -67,19 +62,24 @@ const questions = [
 
 ];
 
-// TODO: Create a function to write README file
-function writeToFile(dataD) {
-    fs.writeFile('README.md', dataD)
-    console.log ("readme has been written")
-};
+
 
 // TODO: Create a function to initialize app
 function init() {
     inquirer.prompt(questions).then(function (appInput) {
-        const dataD = generateMarkdown(appInput) ;
-        writeToFile;
+        const dataD = generateMarkdown(appInput) 
+        
+        fs.writeFile('README.md', dataD, function(err) {
+            if (err) {
+                console.log(err)
+            } else {
+                console.log("readme has been written")
+            }
+        })
+        
     })
-}
+};
+
 
 // Function call to initialize app
 init();

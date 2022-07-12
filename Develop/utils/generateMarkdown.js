@@ -3,7 +3,7 @@
 function generateMarkdown(data) {
   return `
   
-  # ${data.title}
+  ## ${data.title}
 
   ![badge](https://img.shields.io/badge/license-${data.license}-important)
 
@@ -14,12 +14,17 @@ function generateMarkdown(data) {
   ## table of contents
 
   - [Description] (#description)
-  - [installation] (#installation)
+  - [Installation] (#installation)
+  - [Usage] (#usage)
+  - [Acknowledgements] (#acknowledgements)
+  - [License] (#license)
+  - [Testing] (#testing)
+  - [Questions] (#questions)
 
-  ## installation
+  ## Installation
   ${data.install}
 
-  ## Use
+  ## Usage
   ${data.goal}
 
   ## Acknowledgements
@@ -31,9 +36,9 @@ function generateMarkdown(data) {
   Use of this application/Program is controlled and granted under the ${data.license} license found at <https://opensource.org/licenses/${data.license}>
 
   ## Testing
-  ${data.testing}
+  ${data.tests}
 
-  ## Questions?
+  ## Questions
   if you have further questions feel free to email me at ${data.email} or check my github for clarification at ${data.github}
 
 
