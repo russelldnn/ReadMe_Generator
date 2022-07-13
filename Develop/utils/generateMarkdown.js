@@ -3,42 +3,42 @@
 function generateMarkdown(data) {
   return `
   
-  ## ${data.title}
+  # ${data.title}
 
   ![badge](https://img.shields.io/badge/license-${data.license}-important)
 
-  ## Description
+  # Description
 
   ${data.description}
 
-  ## table of contents
+  # table of contents
 
-  - [Description] (#description)
-  - [Installation] (#installation)
-  - [Usage] (#usage)
-  - [Acknowledgements] (#acknowledgements)
-  - [License] (#license)
-  - [Testing] (#testing)
-  - [Questions] (#questions)
+  - [Description] (##description)
+  - [Installation] (##installation)
+  - [Usage] (##usage)
+  - [Acknowledgements] (##acknowledgements)
+  - [License] (##license)
+  - [Testing] (##testing)
+  - [Questions] (##questions)
 
-  ## Installation
+  # Installation
   ${data.install}
 
-  ## Usage
+  # Usage
   ${data.goal}
 
-  ## Acknowledgements
+  # Acknowledgements
   ${data.acknowledgements}
 
-  ## License
+  # License
   ![badge](https://img.shields.io/badge/license-${data.license}-important)
   <br>
   Use of this application/Program is controlled and granted under the ${data.license} license found at <https://opensource.org/licenses/${data.license}>
 
-  ## Testing
+  # Testing
   ${data.tests}
 
-  ## Questions
+  # Questions
   if you have further questions feel free to email me at ${data.email} or check my github for clarification at ${data.github}
 
 
