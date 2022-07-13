@@ -1,8 +1,10 @@
 // TODO: Include packages needed for this application
+//requiring fs, inquirer and the generatemarkdown.js so I can use the function defined on it
     let generateMarkdown = require ('./utils/generateMarkdown.js');
     let fs = require ('fs');
     let inquirer = require ('inquirer');
 // TODO: Create an array of questions for user input
+//an array of prompts for inquirer to ask and record
 const questions = [
     {
         type: 'input',
@@ -65,6 +67,7 @@ const questions = [
 
 
 // TODO: Create a function to initialize app
+//init function surrounding a writeFile method to take the prompt answers and generate the readme based on the design
 function init() {
     inquirer.prompt(questions).then(function (appInput) {
         const dataD = generateMarkdown(appInput) 
@@ -82,4 +85,5 @@ function init() {
 
 
 // Function call to initialize app
+//calling the function
 init();

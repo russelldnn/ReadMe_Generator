@@ -1,5 +1,6 @@
 
 // TODO: Create a function to generate markdown for README
+//function with the structure of the readme using ``
 function generateMarkdown(data) {
   return `
   
